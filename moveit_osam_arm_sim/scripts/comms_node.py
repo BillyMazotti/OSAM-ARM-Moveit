@@ -7,19 +7,20 @@ import numpy as np
 from sensor_msgs.msg import JointState
 from write_json import write_to_json
 
+from comms_config import joints_positions_json_path, ee_velocity_json_path
+
 joint_positions = {
 		"timestamp": 0.0,
-		"joints" : np.zeros(8)}
+		"joints" : np.zeros(8).tolist()}
 
 def callback(data):
     
-    json_path = "/run/user/1000/gvfs/sftp:host=billys-macbook-pro-5.local/Users/billymazotti/github/DataComms/selected_json_file.json"
     joint_positions["timestamp"] = data.header.stamp.secs + 1e-9 * data.header.stamp.nsecs
     joint_positions["joints"] = list(data.position)
-    # print(joint_positions)
-    write_to_json(json_path,joint_positions)
+    write_to_json(joints_positions_json_path,joint_positions)
 
-    # write_to_json()
+    rounded_joint_positions = [round(elem, 2) for elem in joint_positions["joints"]]
+    print(f'Publishign path [{joint_positions["timestamp"]}]: {rounded_joint_positions}')
     
 def listener():
 
