@@ -30,11 +30,3 @@ roslaunch moveit_osam_arm_sim demo.launch
 
 ## TODO's
 Add Python nodes to demo.launch file that write current joint angles to joints_positions.json file and read velocity inputs from ee_velocity.json. Both json file paths will be defined in comms_config.py.
-
-
-
-
-
-
-
-
