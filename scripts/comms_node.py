@@ -22,10 +22,17 @@ def callback(data):
     joint_positions["timestamp"] = data.header.stamp.secs + 1e-9 * data.header.stamp.nsecs
     data_deg_mm = np.array(data.position)
     data_deg_mm[:7] *= 180.0/PI
-    joint_positions["joints"] = l=data_deg_mm.tolist()
+
+    # for joints array
+    # joint_positions["joints"] = data_deg_mm.tolist()
+
+    # for each joint is a key
+    for joint_idx, joint_val in enumerate(data_deg_mm):
+        joint_positions[f"joint{joint_idx+1}"] = joint_val
+
     write_to_json(joints_positions_json_path,joint_positions)
 
-    rounded_joint_positions = [round(elem, 2) for elem in joint_positions["joints"]]
+    rounded_joint_positions = [round(elem, 2) for elem in data_deg_mm]
     print(f'Publishign path [{joint_positions["timestamp"]}]: {rounded_joint_positions}')
     
 def listener():
