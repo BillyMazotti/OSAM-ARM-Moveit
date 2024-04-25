@@ -402,7 +402,7 @@
       velocity="3" />
   </joint>
   <link
-    name="link_7">
+    name="ee_link">
     <inertial>
       <origin
         xyz="-2.9345E-09 0.022658 1.3952E-07"
@@ -450,7 +450,7 @@
     <parent
       link="link_6" />
     <child
-      link="link_7" />
+      link="ee_link" />
     <axis
       xyz="0 1 0" />
     <limit
@@ -506,7 +506,7 @@
       xyz="0 0.05 0"
       rpy="0 0 0" />
     <parent
-      link="link_7" />
+      link="ee_link" />
     <child
       link="link_8" />
     <axis
@@ -564,7 +564,7 @@
       xyz="-0.075 0.072 -0.03"
       rpy="3.1416 0 3.1416" />
     <parent
-      link="link_7" />
+      link="ee_link" />
     <child
       link="link_9" />
     <axis
@@ -654,14 +654,14 @@
     </actuator>
   </transmission>
 
-  <transmission name="link_7_trans">
+  <transmission name="ee_link_trans">
     <type>transmission_interface/SimpleTransmission</type>
 
     <joint name="joint6">
       <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </joint>
 
-    <actuator name="link_7_motor">
+    <actuator name="ee_link_motor">
       <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface> 
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
@@ -723,7 +723,7 @@
     <selfCollide>true</selfCollide>
   </gazebo>
 
-  <gazebo reference="link_7">
+  <gazebo reference="ee_link">
     <selfCollide>true</selfCollide>
   </gazebo>
 

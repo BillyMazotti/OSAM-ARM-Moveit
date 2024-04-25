@@ -1,5 +1,5 @@
 #Controller to control robot arm joints
-robot_arm_controller:
+arm_controller:
   type: "position_controllers/JointTrajectoryController"
   joints: [joint0, joint1, joint2, joint3, joint4, joint5, joint6]
 
@@ -12,3 +12,8 @@ hand_ee_controller:
 joint_state_controller:
   type: "joint_state_controller/JointStateController"
   publish_rate: 50
+
+#Controller to control velocity of robot arm joints
+joint_group_position_controller:
+  type: "position_controllers/JointGroupPositionController"
+  joints: [joint0, joint1, joint2, joint3, joint4, joint5, joint6]
