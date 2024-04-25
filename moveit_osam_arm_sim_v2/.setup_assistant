@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: osam_arm_4_urdf_v2
+    relative_path: urdf/osam_arm_4_urdf_v2.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/osam_arm_4_urdf_v2.srdf
+  CONFIG:
+    author_name: Billy Mazotti
+    author_email: bmazotti@umich.edu
+    generated_timestamp: 1714003281
