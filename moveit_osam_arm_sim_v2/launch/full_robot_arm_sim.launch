@@ -11,5 +11,8 @@
     <include file="$(find moveit_osam_arm_sim_v2)/launch/moveit_rviz.launch" if="$(arg use_rviz)">
         <arg name="rviz_config" value="$(find moveit_osam_arm_sim_v2)/launch/moveit.rviz"/> 
     </include>
+
+    <!-- Launch space mouse to teleoperate the arm -->
+    <include file = "$(find moveit_servo)/launch/spacenav_cpp.launch" />
     
 </launch>

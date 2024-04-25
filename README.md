@@ -27,6 +27,16 @@ source ~/ws_osam_arm/devel/setup.bash
 roslaunch moveit_osam_arm_sim demo.launch
 ```
 
+Run the following comand to load up arm in rviz and gazebo, and enable the end effector to be servoed
+```
+roslaunch moveit_osam_arm_sim_v2 full_robot_arm_sim.launch
+```
+
+Run the folloiwng command to enable keyboard teleop servoing of the end effector
+```
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=/servo_server/delta_twist_cmds _stamped:=True
+```
+
 
 ## TODO's
 Add Python nodes to demo.launch file that write current joint angles to joints_positions.json file and read velocity inputs from ee_velocity.json. Both json file paths will be defined in comms_config.py.
