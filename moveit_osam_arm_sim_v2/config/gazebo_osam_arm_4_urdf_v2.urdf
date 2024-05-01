@@ -232,7 +232,7 @@
         <parent link="link_6" />
         <child link="ee_link" />
         <axis xyz="0 1 0" />
-        <limit lower="-3.14" upper="3.14" effort="111" velocity="0" />
+        <limit lower="-3.14" upper="3.14" effort="111" velocity="3" />
     </joint>
     <link name="link_8">
         <inertial>
