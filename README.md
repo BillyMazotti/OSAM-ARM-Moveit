@@ -3,15 +3,14 @@ This repo contains two packages that are used to simulate a custom robot arm des
 
 
 ## Workstation Specs and Dependencies
-* Ubuntu 20.04
-* ROS1 Noetic ([install instructions](https://wiki.ros.org/noetic/Installation/Ubuntu))
-* Moveit1 
-    * Recommended: install from binary: `sudo apt install ros-noetic-moveit`
-    * ([install from source](https://ros-planning.github.io/moveit_tutorials/doc/getting_started/getting_started.html))
+* Ubuntu 20.04: 
+* VMware Install ([VMware Workstation Player 17](https://www.vmware.com/products/workstation-player.html) for Windows | [VMWare Fusion Player](https://customerconnect.vmware.com/en/downloads/info/slug/desktop_end_user_computing/vmware_fusion/13_0)
+13 for macOS)
+* ROS1 Noetic: [install instructions](https://wiki.ros.org/noetic/Installation/Ubuntu)
+* Moveit1 for Noetic: [install from source](https://ros-planning.github.io/moveit_tutorials/doc/getting_started/getting_started.html)
 
 
 ## Installation Steps
-For standalone workspace
 ```
 mkdir -p ws_osam_arm/src
 cd ws_osam_arm
