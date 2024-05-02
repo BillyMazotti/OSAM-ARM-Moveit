@@ -25,7 +25,7 @@ git clone https://github.com/ros-teleop/teleop_twist_keyboard.git
 catkin build teleop_twist_keyboard osam_arm_4_urdf_v2 moveit_osam_arm_sim_v2 --no-deps
 ```
 
-Lastly follow the setup steps (everything before launch the gazebo simulation) here or in realtime_servo_tutorial.rst.
+Lastly follow the setup steps (everything before launch the gazebo simulation) [here](https://ros-planning.github.io/moveit_tutorials/doc/realtime_servo/realtime_servo_tutorial.html) or in realtime_servo_tutorial.rst.
 
 ## Launching the Arm Simulation
 In a new terminal run the following commands to launch Gazebo and RViz.
