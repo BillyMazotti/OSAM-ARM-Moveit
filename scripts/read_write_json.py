@@ -7,10 +7,25 @@ def set_message_send_rate():
     
     return 200
 	
-def write_to_json(json_path: str, dictionary: dict):
+def write_to_json(json_path: str, contents: dict):
 
-    with open(json_path, "w") as outfile: 
-        json.dump(dictionary, outfile,indent = 4)
+    try:
+        with open(json_path, "w") as outfile: 
+            json.dump(contents, outfile,indent = 4)
+    except Exception as error:
+
+        pass
+
+
+def read_json(json_path: str):
+    
+    try: 
+        with open(json_path,"r") as infile:
+
+            return json.load(infile)
+    except Exception as error:
+
+        pass
 
 if __name__ == '__main__':
     
