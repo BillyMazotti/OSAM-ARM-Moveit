@@ -1,4 +1,3 @@
-V# OSAM-ARM-Moveit
 This repo contains two packages that are used to simulate a custom robot arm desgin for on-orbit assembly and manufacturing tasks.
 
 
