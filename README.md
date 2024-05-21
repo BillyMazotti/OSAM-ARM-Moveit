@@ -111,3 +111,7 @@ For recieving and sending commands from and to the twin simulation in Unreal Eng
 
 ![alt text](images/image-15.png)
 
+## Download OSAM-Project.zip and watch the YouTube for following the remaining steps
+* [OSAM-Project.zip](https://drive.google.com/file/d/1Y-wGNutQ8dwV8XDoismog4yee_TjyPtF/view?usp=sharing)
+* OSAM Project Final Setup YouTube video: https://www.youtube.com/watch?v=7pNdTCxkBLM
+
